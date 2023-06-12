@@ -1,0 +1,31 @@
+/* General */
+
+@font-face {
+  font-family: "FloridaProject";
+  src: url("../assets/fonts/Florida Project Phase One.ttf");
+}
+
+:root {
+  --primary-color: #f7af38;
+  --secondary-color: #252523;
+  --whatsapp-color: #00bb2d;
+}
+
+body {
+  background-color: var(--secondary-color) !important;
+  touch-action: manipulation !important;
+  overflow-x: none;
+}
+
+main {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+span {
+  font-weight: bold;
+}

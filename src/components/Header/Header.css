@@ -1,0 +1,20 @@
+/* NAVBAR */
+
+#header-navbar {
+    background-color: var(--secondary-color) !important;
+  }
+  
+  .nav-link {
+    color: whitesmoke !important;
+    font-weight: bold !important;
+    letter-spacing: 1.2px;
+    margin-right: 16px;
+  }
+  
+  .nav-link:hover {
+    color: var(--primary-color) !important;
+  }
+  
+  #button-toggle {
+    background-color: var(--primary-color) !important;
+  }
