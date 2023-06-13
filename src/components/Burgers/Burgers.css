@@ -1,0 +1,72 @@
+/* BURGERS SECTION */
+
+.burgers-section{
+    margin-top: 24px;
+}
+
+.burgers-title {
+    text-align: center;
+    padding: 16px 24px 0px 24px;
+    color: whitesmoke;
+    font-family: "FloridaProject";
+    letter-spacing: 1.5px;
+    font-weight: bold;
+  }
+  
+  .burgers-subtitle {
+    text-align: center;
+    color: whitesmoke;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  .burgers-subtitle a {
+    color: var(--primary-color);
+    text-decoration: underline !important;
+  }
+  
+  .burgers-description {
+    text-align: center;
+    padding: 16px;
+    color: whitesmoke;
+    font-size: 16px !important;
+    font-weight: semibold !important;
+  }
+  
+  #carouselExampleCaptions {
+    max-width: 600px;
+    padding: 16px;
+    background-color: var(--primary-color);
+    margin: 0 auto;
+    margin-top: 24px;
+  }
+  
+  .carousel-item img {
+    border-radius: 12px;
+  }
+  
+  .btn-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .btn-menu_2 {
+    width: 300px;
+    padding: 12px;
+    margin-top: 56px;
+    margin-bottom: 56px;
+    background-color: darkred;
+    border: none;
+  }
+  
+  .btn-menu_2 a {
+    color: whitesmoke !important;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.55);
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  
+  .btn-menu_2:active {
+    background-color: var(--primary-color);
+  }
+  

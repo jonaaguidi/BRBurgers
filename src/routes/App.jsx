@@ -1,6 +1,6 @@
 const App = () => {
   return (
-    <div>App</div>
+    <div style={{color:"white"}}>App</div>
   )
 }
 

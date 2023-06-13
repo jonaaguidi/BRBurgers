@@ -1,0 +1,14 @@
+/* Marquee */
+
+.marquee {
+    cursor: pointer;
+    height: 56px;
+    padding: 8px;
+    line-height: 36px;
+    background-color: var(--primary-color);
+    color: whitesmoke;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.65);
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }

@@ -1,0 +1,62 @@
+/* TESTIMONIALS SECTION */
+
+#testimonials {
+  padding: 36px 12px;
+}
+
+.testimonials-container {
+  background-color: var(--primary-color);
+  padding: 24px;
+}
+
+.testimonials-title {
+  font-family: "FloridaProject";
+  letter-spacing: 1.5px;
+  text-align: center;
+  padding: 16px 24px 0px 24px;
+  color: whitesmoke;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.75);
+  font-weight: bold;
+}
+
+.testimonials-subtitle {
+  text-align: center;
+  color: whitesmoke;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.75);
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.testimonials-subtitle a {
+  text-decoration: underline !important;
+  color: darkred;
+  text-shadow: none;
+}
+
+.testimonial { 
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 24px;
+  border-radius: 10px;
+  background-color: var(--secondary-color);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.testimonial-content {
+  text-align: center;
+  color: whitesmoke;
+}
+
+.testimonial-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+
+.carousel-indicators {
+  bottom: -12px !important;
+}
