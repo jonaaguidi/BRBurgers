@@ -4,20 +4,39 @@ import MarqueeComponent from "../components/Marquee/Marquee";
 import Burgers from '../components/Burgers/Burgers';
 import Footer from '../components/Footer/Footer';
 import Reviews from '../components/Testimonials/Reviews';
+import Location from '../components/Location/Location';
+import Instagram from '../components/Instagram/Instagram';
+import Preloader from '../components/Preloader/Preloader';
+import { useEffect, useState } from 'react';
 
 function Home() {
+  const [loaded, setLoaded] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoaded(true);
+    }, 2700);
+  }, []);
+
   return (
     <>
-    <Header />
-    <main>
-      <Hero />
-      <MarqueeComponent />
-      <Burgers />
-      <Reviews />
-    </main>
-    <Footer />
+    {!loaded && <Preloader />}
+    {loaded && (
+      <>
+      <Header />
+      <main>
+        <Hero />
+        <MarqueeComponent />
+        <Burgers />
+        <Reviews />
+        <Location />
+        <Instagram />
+      </main>
+      <Footer />
     </>
-  )
+    )}
+  </>
+  );
 }
 
 export default Home;

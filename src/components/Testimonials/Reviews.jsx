@@ -6,7 +6,7 @@ import "./Reviews.css"
 const Reviews = () => {
     return (
         <div id="testimonials" className="testimonials-container">
-            <h4 className="testimonials-title">📖 NUESTRAS RESEÑAS DE GOOGLE 🖊️</h4>
+            <h4 className="testimonials-title">NUESTRAS RESEÑAS DE GOOGLE 📖🖊️</h4>
             <h6 className="testimonials-subtitle">¿Qué opinan sobre nosotros?<br />DEJANOS TU RESEÑA <a
                 href="https://www.google.com/maps/place/BR+Burgers/@-34.5261055,-58.4985175,19z/data=!4m8!3m7!1s0x95bcb12ac7de2707:0x704423c3a2da747d!8m2!3d-34.526908!4d-58.4976617!9m1!1b1!16s%2Fg%2F11p0wr_gs_?hl=es"
                 target="_blank"

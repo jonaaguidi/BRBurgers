@@ -1,0 +1,25 @@
+/* SOCIAL SECTION */
+
+.social-container {
+    margin-top: 12px;
+  }
+  
+  .social-ig {
+    text-align: center;
+    font-size: 18px !important;
+    font-weight: bold;
+    margin-bottom: 36px;
+  }
+  
+  .social-ig a {
+    color: var(--primary-color);
+    margin-left: 4px;
+    text-decoration: underline !important;
+  }
+  
+  .social-ig::before {
+    content: url("../../assets/imgs/instagram.png");
+    position: relative;
+    top: 5px;
+    right: 3px;
+  }
