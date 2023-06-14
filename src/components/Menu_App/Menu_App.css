@@ -1,0 +1,64 @@
+#menu-app{
+  margin-bottom: 36px;
+}
+
+.menu-title {
+  text-align: center;
+  padding-top: 32px;
+  padding-bottom: 36px;
+  font-family: "FloridaProject" !important;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.8);
+  text-transform: uppercase;
+  color: whitesmoke;
+}
+
+.menu-dropdowns {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: var(--primary-color);
+  border-radius: 3px;
+}
+
+.menu-dropdowns_item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 8px 16px 8px;
+  background-color: var(--secondary-color);
+  border-bottom: 4px solid var(--primary-color);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.menu-dropdowns_subItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px;
+  background-color: darkred;
+  border-bottom: 4px solid var(--primary-color);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.menu-dropdowns_text {
+  font-family: "FloridaProject";
+  padding-top: 12px;
+  margin-left: 16px;
+  color: whitesmoke;
+  font-size: medium;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-shadow: 3px 4px 15px rgba(0, 0, 0, 0.75);
+}
+
+.icon_dropdowns{
+  width: 56px;
+  color: whitesmoke;
+}
+
+.rotate {
+  transition: transform 0.5s ease-in-out;
+  transform: rotate(180deg);
+}

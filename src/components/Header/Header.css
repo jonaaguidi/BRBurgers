@@ -5,6 +5,7 @@
   }
   
   .nav-link {
+    cursor: pointer;
     color: whitesmoke !important;
     font-weight: bold !important;
     letter-spacing: 1.2px;

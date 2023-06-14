@@ -1,0 +1,25 @@
+/* HEADER + SHOPPING CART */
+
+#header-navbar {
+  background-color: var(--secondary-color) !important;
+}
+
+#button-toggle {
+  background-color: var(--primary-color) !important;
+}
+
+.cart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  width: 72px;
+  height: 40px;
+  padding: 16px 20px 16px 20px;
+  margin-left: 44px;
+  margin-right: 12px;
+  background-color: var(--primary-color);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border: none;
+  border-radius: 10px;
+}

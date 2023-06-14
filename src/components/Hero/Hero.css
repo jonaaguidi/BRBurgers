@@ -61,7 +61,7 @@
     border-radius: 20px;
     background-color: var(--primary-color);
     color: whitesmoke;
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
     font-size: 16px;
     font-weight: bold;
     animation: pulse 2s linear infinite;

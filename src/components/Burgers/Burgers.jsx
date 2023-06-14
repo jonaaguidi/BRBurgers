@@ -5,7 +5,7 @@ import chesse from "../../assets/imgs/chesse.png"
 
 const Burgers = () => {
   return (
-        <div className="burgers-section">
+        <div id="burgers" className="burgers-section">
             <h4 className="burgers-title">🔥NUESTRAS HAMBURGUESAS MÁS PEDIDAS🔥</h4>
             <h6 className="burgers-subtitle">Descubre nuestro <a
                     href="https://drive.google.com/file/d/1rKXbTFmGx-szr6x4YsC-pxS5K1aJSPSf/view"
