@@ -4,6 +4,9 @@ import Home from "./routes/Home.jsx"
 import App from './routes/App.jsx';
 import Error from './components/Error.jsx';
 import './styles/index.css';
+import Modal from 'react-modal';
+
+Modal.setAppElement('#root');
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>

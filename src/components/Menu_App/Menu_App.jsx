@@ -1,12 +1,19 @@
 import './Menu_App.css';
 import { useState } from 'react';
 import { BsFillCaretDownSquareFill } from 'react-icons/bs';
-import { burgersSimples } from '../../Data/burgersSimples';
 import Product_card from '../Product_card/Product_card';
+
+import { burgersSimples } from '../../Data/burgersSimples';
+import { postres } from '../../Data/postres';
+import { bebidas } from '../../Data/bebidas';
+import { salsas } from '../../Data/salsas';
+import { entradas } from '../../Data/entradas';
+import { burgersVeggies } from '../../Data/burgersVeggies';
+import { burgersDobles } from '../../Data/burgersDobles';
 
 const Menu_App = () => {
 
-    {/* Estados de Dropdowns*/}
+    {/* Estados de Dropdowns*/ }
     const [DropdownBurgersOpen, setDropdownBurgersOpen] = useState(false);
     const [showBurgerSimples, setShowBurgerSimples] = useState(false);
     const [showBurgerDobles, setShowBurgerDobles] = useState(false);
@@ -16,7 +23,7 @@ const Menu_App = () => {
     const [showBebidas, setShowBebidas] = useState(false);
     const [showPostres, setShowPostres] = useState(false);
 
-    {/* Manejadores para mostrar/ocultar los dropdowns */}
+    {/* Manejadores para mostrar/ocultar los dropdowns */ }
     const handleDropdownToggle = () => {
         setDropdownBurgersOpen(!DropdownBurgersOpen);
     };
@@ -68,6 +75,9 @@ const Menu_App = () => {
                                         name={burger.name}
                                         description={burger.description}
                                         price={burger.price}
+                                        extras={burger.extras.map((extra, i) => (
+                                            <button className='btn_extras' key={i}>{extra.name} - ${burger.price + extra.price}</button>
+                                        ))}
                                     />
                                 ))}
                             </div>
@@ -78,12 +88,15 @@ const Menu_App = () => {
                                 <BsFillCaretDownSquareFill className={`icon_dropdowns ${showBurgerDobles ? 'rotate' : ''}`} />
                             </div>
                             <div id="burgers-dobles" className={showBurgerDobles ? 'show' : 'hide'}>
-                            {burgersSimples.map((burger, index) => (
+                                {burgersDobles.map((burger, index) => (
                                     <Product_card
                                         key={index}
                                         name={burger.name}
                                         description={burger.description}
                                         price={burger.price}
+                                        extras={burger.extras.map((extra, i) => (
+                                            <button className='btn_extras' key={i}>{extra.name} - ${burger.price + extra.price}</button>
+                                        ))}
                                     />
                                 ))}
                             </div>
@@ -94,12 +107,15 @@ const Menu_App = () => {
                                 <BsFillCaretDownSquareFill className={`icon_dropdowns ${showBurgerVeggies ? 'rotate' : ''}`} />
                             </div>
                             <div id="burgers-veggies" className={showBurgerVeggies ? 'show' : 'hide'}>
-                            {burgersSimples.map((burger, index) => (
+                                {burgersVeggies.map((burger, index) => (
                                     <Product_card
                                         key={index}
                                         name={burger.name}
                                         description={burger.description}
                                         price={burger.price}
+                                        extras={burger.extras.map((extra, i) => (
+                                            <button className='btn_extras' key={i}>{extra.name} - ${burger.price + extra.price}</button>
+                                        ))}
                                     />
                                 ))}
                             </div>
@@ -113,14 +129,17 @@ const Menu_App = () => {
                         <BsFillCaretDownSquareFill className={`icon_dropdowns ${showEntradas ? 'rotate' : ''}`} />
                     </div>
                     <div id="entradas" className={showEntradas ? 'show' : 'hide'}>
-                            {burgersSimples.map((burger, index) => (
+                        {entradas.map((entrada, index) => (
                                     <Product_card
                                         key={index}
-                                        name={burger.name}
-                                        description={burger.description}
-                                        price={burger.price}
+                                        name={entrada.name}
+                                        description={entrada.description}
+                                        price={entrada.price}
+                                        extras={entrada.options.map((option, i) => (
+                                            <button className='btn_extras' key={i}>{option.name} - ${option.price}</button>
+                                        ))}
                                     />
-                                ))}
+                             ))}
                     </div>
 
 
@@ -129,14 +148,17 @@ const Menu_App = () => {
                         <BsFillCaretDownSquareFill className={`icon_dropdowns ${showSalsas ? 'rotate' : ''}`} />
                     </div>
                     <div id="salsas" className={showSalsas ? "show" : "hide"}>
-                        {burgersSimples.map((burger, index) => (
-                                <Product_card
-                                     key={index}
-                                     name={burger.name}
-                                     description={burger.description}
-                                    price={burger.price}
-                                />
-                            ))}        
+                        {salsas.map((salsa, index) => (
+                                    <Product_card
+                                        key={index}
+                                        name={salsa.name}
+                                        description={salsa.description}
+                                        price={salsa.price}
+                                        extras={salsa.options.map((option, i) => (
+                                            <button className='btn_extras' key={i}>{option.name}</button>
+                                        ))}
+                                    />
+                               ))}
                     </div>
 
 
@@ -145,14 +167,17 @@ const Menu_App = () => {
                         <BsFillCaretDownSquareFill className={`icon_dropdowns ${showBebidas ? 'rotate' : ''}`} />
                     </div>
                     <div id="bebidas" className={showBebidas ? "show" : "hide"}>
-                        {burgersSimples.map((burger, index) => (
-                                <Product_card
-                                     key={index}
-                                     name={burger.name}
-                                     description={burger.description}
-                                    price={burger.price}
-                                />
-                            ))} 
+                        {bebidas.map((bebida, index) => (
+                                    <Product_card
+                                        key={index}
+                                        name={bebida.name}
+                                        description={bebida.description}
+                                        price={bebida.price}
+                                        extras={bebida.options.map((option, i) => (
+                                            <button className='btn_extras' key={i}>{option.name} - ${bebida.price}</button>
+                                        ))}
+                                    />
+                             ))}
                     </div>
 
 
@@ -161,14 +186,17 @@ const Menu_App = () => {
                         <BsFillCaretDownSquareFill className={`icon_dropdowns ${showPostres ? 'rotate' : ''}`} />
                     </div>
                     <div id="postres" className={showPostres ? "show" : "hide"}>
-                        {burgersSimples.map((burger, index) => (
-                                <Product_card
-                                     key={index}
-                                     name={burger.name}
-                                     description={burger.description}
-                                    price={burger.price}
-                                />
-                            ))} 
+                        {postres.map((postres, index) => (
+                                    <Product_card
+                                        key={index}
+                                        name={postres.name}
+                                        description={postres.description}
+                                        price={postres.price}
+                                        extras={postres.options.map((option, i) => (
+                                            <button className='btn_extras' key={i}>{option.name} - ${postres.price}</button>
+                                        ))}
+                                    />
+                            ))}
                     </div>
 
 

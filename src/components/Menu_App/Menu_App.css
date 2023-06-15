@@ -36,7 +36,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 6px;
-  background-color: darkred;
+  background-color: black;
   border-bottom: 4px solid var(--primary-color);
   border-radius: 10px;
   cursor: pointer;
