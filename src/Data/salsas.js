@@ -1,5 +1,6 @@
 export const salsas = [
     {
+        id:5,
         name: "Salsas Extras",
         description: "Potecito Aparte",
         price: 100,

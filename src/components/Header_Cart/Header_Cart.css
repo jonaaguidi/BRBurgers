@@ -2,6 +2,7 @@
 
 #header-navbar {
   background-color: var(--secondary-color) !important;
+  padding: 24px;
 }
 
 #button-toggle {
@@ -22,4 +23,10 @@
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   border: none;
   border-radius: 10px;
+  cursor: pointer;
+}
+
+.cart:hover{
+  transform: scale(1.04);
+  box-shadow: rgba(0, 0, 0, 0.95) 2px 2px 30px;
 }

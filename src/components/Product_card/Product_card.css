@@ -20,7 +20,7 @@
 .card button{
   max-width: auto; 
   margin: 0 auto;
-  padding: 8px 40px;
+  padding: 8px 24px;
   border: none;
   border-radius: 10px;
   background-color: var(--primary-color);
@@ -44,9 +44,9 @@
   margin-bottom: 8px;
   background-color: var(--primary-color);
   border-radius: 10px;
-  color: whitesmoke;
+  color: white;
   text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.55);
-  font-weight: 500;
+  
 }
 
 .hide{

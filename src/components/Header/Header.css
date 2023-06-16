@@ -2,6 +2,7 @@
 
 #header-navbar {
     background-color: var(--secondary-color) !important;
+    padding:24px;
   }
   
   .nav-link {

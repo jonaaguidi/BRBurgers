@@ -1,5 +1,6 @@
 export const bebidas = [
     {
+        id: 1,
         name: "Gaseosa",
         description: "Lata de 355ml",
         price: 500,
@@ -14,6 +15,7 @@ export const bebidas = [
         ]
     },
     {
+        id: 2,
         name: "Agua",
         description: "Botella de 500ml",
         price: 400,
@@ -24,6 +26,7 @@ export const bebidas = [
         ]
     },
     {
+        id: 3,
         name: "Cerveza BierHaus",
         description: "Lata de 473ml",
         price: 800,
@@ -35,6 +38,7 @@ export const bebidas = [
         ]
     },
     {
+        id: 4,
         name: "Cerveza Heineken",
         description: "Lata de 473ml",
         price: 700,

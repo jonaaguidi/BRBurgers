@@ -1,5 +1,6 @@
 export const postres = [
     {
+        id:6,
         name: "Helados LATTO",
         description: "Pote de 120cc",
         price: 650,
