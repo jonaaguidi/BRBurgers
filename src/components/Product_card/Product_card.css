@@ -1,7 +1,6 @@
 .card {
   text-align: center;
   padding: 16px 16px 24px 16px;
-  cursor: pointer;
   background-color:  var(--secondary-color);
   color: whitesmoke;
   border-bottom: 4px solid white
@@ -18,15 +17,20 @@
 }
 
 .card button{
+  cursor: pointer;
   max-width: auto; 
   margin: 0 auto;
   padding: 8px 24px;
   border: none;
   border-radius: 10px;
   background-color: var(--primary-color);
-  color: whitesmoke;
+  color: white;
   letter-spacing: 0.3px; 
-  text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.85);
+}
+
+.card button:hover{
+  transform: scale(1.04);
+  transition: 0.3s ease-in-out;
 }
 
 .btn-container_extras{
@@ -39,14 +43,34 @@
 
 .btn_extras{
   width: 100%;
-  padding: 8px 12px;
+  padding: 10px 12px;
   border: none;
-  margin-bottom: 8px;
+  margin-bottom: 12px;
   background-color: var(--primary-color);
   border-radius: 10px;
   color: white;
-  text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.55);
-  
+}
+
+.btn_extras:hover{
+  transition: 0.3s ease-in-out;
+  background-color: darkred;
+  transform: scale(1.02);
+}
+
+.close_modal{
+  cursor:pointer;
+  color: darkred;
+  transform: scale(2.0);
+}
+
+.close_modal:hover{
+  transition: 0.3s ease-in-out;
+  transform: scale(2.2);
+}
+
+.close_modal:focus{
+  transition: 0.3s ease-in-out;
+  transform: scale(2.2);
 }
 
 .hide{

@@ -27,6 +27,7 @@
 }
 
 .cart:hover{
-  transform: scale(1.04);
+  transition: 0.3s ease-in-out;
+  transform: scale(1.06);
   box-shadow: rgba(0, 0, 0, 0.95) 2px 2px 30px;
 }

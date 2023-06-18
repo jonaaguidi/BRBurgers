@@ -4,7 +4,7 @@ import { BsFillBackspaceFill } from "react-icons/bs";
 import Modal from 'react-modal';
 import './Product_card.css';
 
-const Product_card = ({ name, description, price, extras }) => {
+const Product_card = ({ name, description, price, extras  }) => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
 
   const openModal = () => {
@@ -48,7 +48,7 @@ const Product_card = ({ name, description, price, extras }) => {
       >
         <div style={{ display: 'flex', justifyContent: "space-between", alignItems: "center", paddingBottom: "12px", borderBottom: "2px solid black" }}>
           <h3>Elija una Opción</h3>
-          <BsFillBackspaceFill onClick={closeModal} style={{ transform: "scale(2.0)", cursor: "pointer", color: "darkred" }} />
+          <BsFillBackspaceFill className='close_modal' onClick={closeModal} />
         </div>
         <div>
             <div className='btn-container_extras'>

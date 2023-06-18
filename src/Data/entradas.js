@@ -45,7 +45,7 @@ export const entradas = [
         id: 11,
         name: "Porciones de Papas Fritas",
         description: "Porciones de papas fritas individuales o para compartir",
-        price: 2500,
+        price: 700,
         amount: 0,
         options: [
             { name: "Individual", price: 700 },
