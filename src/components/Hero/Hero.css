@@ -79,6 +79,12 @@
     top: 4px;
     right: 6px;
   }
+
+  .btn-menu:hover{
+    transition: 0.4s ease-in-out;
+    transform: scale(1.05);
+    box-shadow: rgba(0, 0, 0, 0.95) 2px 2px 30px;
+  }
   
   .btn-wsp {
     position: relative;

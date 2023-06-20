@@ -58,19 +58,19 @@
 }
 
 .close_modal{
-  cursor:pointer;
+  cursor: pointer;
   color: darkred;
-  transform: scale(2.0);
+  transform: scale(1.7);
 }
 
 .close_modal:hover{
   transition: 0.3s ease-in-out;
-  transform: scale(2.2);
+  transform: scale(1.9);
 }
 
 .close_modal:focus{
   transition: 0.3s ease-in-out;
-  transform: scale(2.2);
+  transform: scale(1.9);
 }
 
 .hide{

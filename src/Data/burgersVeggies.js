@@ -5,8 +5,8 @@ export const burgersVeggies = [
         price: 2200,
         amount: 0,
         extras: [
-            { name: "Sin Extra", price: 0 },
-            { name: "Extra Queso", price: 100 },
+            { name: "Sin Extra", price: 2200 },
+            { name: "Extra Queso", price: 2300 },
         ]
     },
     {   id:102,
@@ -15,8 +15,8 @@ export const burgersVeggies = [
         price: 2200,
         amount: 0,
         extras: [
-            { name: "Sin Extra", price: 0 },
-            { name: "Extra Queso", price: 100 },
+            { name: "Sin Extra", price: 2200 },
+            { name: "Extra Queso", price: 2300 },
         ]
     },
     {   id:103,
@@ -25,8 +25,8 @@ export const burgersVeggies = [
         price: 2500,
         amount: 0,
         extras: [
-            { name: "Sin Extra", price: 0 },
-            { name: "Medallon Simil Carne", price: 0 },
+            { name: "Sin Extra", price: 2500 },
+            { name: "Medallon Simil Carne", price: 2500 },
         ]
     },
     {   id:104,
@@ -35,8 +35,8 @@ export const burgersVeggies = [
         price: 2500,
         amount: 0,
         extras: [
-            { name: "Sin Extra", price: 0 },
-            { name: "Medallon Simil Carne", price: 0 },
+            { name: "Sin Extra", price: 2500 },
+            { name: "Medallon Simil Carne", price: 2500 },
         ]
     },
     {   id:105,
@@ -45,8 +45,8 @@ export const burgersVeggies = [
         price: 2200,
         amount: 0,
         extras: [
-            { name: "Sin Extra", price: 0 },
-            { name: "Extra Cheddar", price: 100 },
+            { name: "Sin Extra", price: 2200 },
+            { name: "Extra Cheddar", price: 2300 },
         ]
     },
     {   id: 106,
@@ -55,8 +55,8 @@ export const burgersVeggies = [
         price: 2200,
         amount: 0,
         extras: [
-            { name: "Sin Extra", price: 0 },
-            { name: "Extra Cheddar", price: 100 },
+            { name: "Sin Extra", price: 2200 },
+            { name: "Extra Cheddar", price: 2300 },
         ]
     },
     {   id: 107,
@@ -65,7 +65,7 @@ export const burgersVeggies = [
         price: 2500,
         amount: 0,
         extras: [
-            { name: "Sin Extra", price: 0 }
+            { name: "Sin Extra", price: 2500 }
         ]
     }
 ]

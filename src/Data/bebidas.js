@@ -6,12 +6,12 @@ export const bebidas = [
         price: 500,
         amount: 0,
         options: [
-            { name: "Coca Cola" },
-            { name: "Coca Cola Zero" },
-            { name: "Sprite" },
-            { name: "Fanta" },
-            { name: "Schweppes Pomelo" },
-            { name: "Schweppes Tonica" }
+            { name: "Coca Cola", price: 500 },
+            { name: "Coca Cola Zero", price: 500 },
+            { name: "Sprite", price: 500 },
+            { name: "Fanta", price: 500 },
+            { name: "Schweppes Pomelo", price: 500 },
+            { name: "Schweppes Tonica", price: 500 }
         ]
     },
     {
@@ -21,8 +21,8 @@ export const bebidas = [
         price: 400,
         amount: 0,
         options: [
-            { name: "Villavicencio sin Gas" },
-            { name: "Villavicencio con Gas" }
+            { name: "Villavicencio sin Gas", price: 400 },
+            { name: "Villavicencio con Gas", price: 400 }
         ]
     },
     {
@@ -32,9 +32,9 @@ export const bebidas = [
         price: 800,
         amount: 0,
         options: [
-            { name: "IPA" },
-            { name: "Mexican Lager" },
-            { name: "Scotch" }
+            { name: "IPA", price: 800 },
+            { name: "Mexican Lager", price: 800 },
+            { name: "Scotch", price: 800 }
         ]
     },
     {
@@ -44,7 +44,7 @@ export const bebidas = [
         price: 700,
         amount: 0,
         options: [
-            { name: "Original" },
+            { name: "Original", price: 700 },
         ]
     }
 ];

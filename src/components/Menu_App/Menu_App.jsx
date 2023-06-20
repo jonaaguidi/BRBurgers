@@ -4,17 +4,15 @@ import { BsFillCaretDownSquareFill } from 'react-icons/bs';
 import Product_card from '../Product_card/Product_card';
 import { CartContext } from "../../context/CartContext";
 import { burgersSimples } from '../../Data/burgersSimples';
+import { burgersDobles } from '../../Data/burgersDobles';
+import { burgersVeggies } from '../../Data/burgersVeggies';
 import { postres } from '../../Data/postres';
 import { bebidas } from '../../Data/bebidas';
 import { salsas } from '../../Data/salsas';
 import { entradas } from '../../Data/entradas';
-import { burgersVeggies } from '../../Data/burgersVeggies';
-import { burgersDobles } from '../../Data/burgersDobles';
 
 const Menu_App = () => {
-
     const { addProductsToCart } = useContext(CartContext);
-
 
     {/* Estados de Dropdowns*/ }
     const [DropdownBurgersOpen, setDropdownBurgersOpen] = useState(false);
@@ -52,7 +50,6 @@ const Menu_App = () => {
         setShowPostres(!showPostres);
     };
 
-
     return (
 
         <div className="menu-app" id="menu-app">
@@ -74,14 +71,13 @@ const Menu_App = () => {
                             </div>
                             <div id="burgers-simples" className={showBurgerSimples ? 'show' : 'hide'}>
                                 {burgersSimples.map((burger, index) => (
-
                                     <Product_card
                                         key={index}
                                         name={burger.name}
                                         description={burger.description}
                                         price={burger.price}
                                         extras={burger.extras.map((extra, i) => (
-                                            <button className='btn_extras' onClick={() => addProductsToCart(burger, extra)} key={i}>{extra.name} - ${burger.price + extra.price}</button>
+                                            <button className='btn_extras' onClick={() => addProductsToCart(burger, extra)} key={i}>{extra.name} - ${extra.price}</button>
                                         ))}
                                     />
                                 ))} 
@@ -100,7 +96,7 @@ const Menu_App = () => {
                                         description={burger.description}
                                         price={burger.price}
                                         extras={burger.extras.map((extra, i) => (
-                                            <button className='btn_extras' onClick={() => addProductsToCart(burger, extra)} key={i}>{extra.name} - ${burger.price + extra.price}</button>
+                                            <button className='btn_extras' onClick={() => addProductsToCart(burger, extra)} key={i}>{extra.name} - ${extra.price}</button>
                                         ))}
                                     />
                                 ))}
@@ -119,7 +115,7 @@ const Menu_App = () => {
                                         description={burger.description}
                                         price={burger.price}
                                         extras={burger.extras.map((extra, i) => (
-                                            <button className='btn_extras' onClick={() => addProductsToCart(burger, extra)} key={i}>{extra.name} - ${burger.price + extra.price}</button>
+                                            <button className='btn_extras' onClick={() => addProductsToCart(burger, extra)} key={i}>{extra.name} - ${extra.price}</button>
                                         ))}
                                     />
                                 ))}
@@ -205,8 +201,6 @@ const Menu_App = () => {
                             />
                         ))}
                     </div>
-
-
                 </div>
             </div>
         </div>
