@@ -59,3 +59,66 @@
   color: var(--primary-color);
   
 }
+
+.btn-modal_container{
+  width: 100%;
+  height: auto;
+  padding: 30px;
+  background-color: var(--secondary-color);
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  border-radius: 6px;
+}
+
+.btn-total{
+  position: relative;
+  border: none;
+  padding: 8px 16px;
+  background-color: var(--whatsapp-color);
+  color: white;
+  border-radius: 10px;
+}
+
+.btn-total:hover{
+  transition: 0.3s ease-in-out;
+  transform: scale(1.03);
+}
+
+.btn-total::before {
+  position: relative;
+  content: url("../../assets/imgs/whatsapp.svg");
+  top: 2px;
+  right: 4px;
+}
+
+.btn-clearCart{
+  border: none;
+  padding: 8px 16px;
+  background-color: red;
+  color: white;
+  border-radius: 10px;
+}
+
+.btn-clearCart:hover{
+  transition: 0.3s ease-in-out;
+  transform: scale(1.04);
+  background-color: red;
+}
+
+.btn-clearCart:active{
+  transition: 0.3s ease-in-out;
+  transform: scale(1.04);
+}
+
+.close_modal{
+  color: red !important;
+}
+
+@media (min-width: 620px) {
+  .btn-modal_container{
+    flex-direction: row;
+  }
+}

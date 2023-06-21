@@ -47,7 +47,7 @@ const Product_card = ({ name, description, price, extras }) => {
         style={customStyles}
       >
         <div style={{ display: 'flex', justifyContent: "space-between", alignItems: "center", paddingBottom: "12px", borderBottom: "2px solid black" }}>
-          <h4>Elija una Opción</h4>
+          <h5>Elija una Opción</h5>
           <BsFillBackspaceFill className='close_modal' onClick={closeModal} />
         </div>
         <div>

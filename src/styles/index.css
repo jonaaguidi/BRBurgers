@@ -18,6 +18,19 @@ body {
   overflow-x: none;
 }
 
+body::-webkit-scrollbar {
+  width: 12px;
+  height: 10px;
+}
+body::-webkit-scrollbar-track{
+  border-radius: 16px;
+  background: #000000
+}
+body::-webkit-scrollbar-thumb {
+  border-radius: 16px;
+  background:var(--primary-color);
+}
+
 main {
   margin: 0 auto;
 }

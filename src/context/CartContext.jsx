@@ -16,7 +16,6 @@ export const CartProvider = ({ children }) => {
 
   useEffect(() => {
     sessionStorage.setItem("cartProducts", JSON.stringify(cartItems));
-    console.log(cartItems); // Debe sumar +1 al amount en cada click
   }, [cartItems]);
 
   const addProductsToCart = (product, option) => {
@@ -92,9 +91,27 @@ export const CartProvider = ({ children }) => {
     }
   };
 
+  // Calcula el precio total de todos los productos en el carrito
+  const totalPrices = cartItems.reduce(
+    (total, item) =>
+      total + item.options.reduce((subtotal, option) => subtotal + option.amount * option.price, 0),
+    0
+  );
+
+  // Calcula el total de las cantidades de los productos.
+  const totalAmount = cartItems.reduce(
+    (total, product) => total + product.amount,
+    0
+  );
+
+  // Limpia todos los productos del carrito.
+  const clearCart = () => {
+    setCartItems([]);
+  };
+
   return (
     <CartContext.Provider
-      value={{ cartItems, addProductsToCart, deleteProducts }}
+      value={{ cartItems, addProductsToCart, deleteProducts, totalPrices, totalAmount, clearCart }}
     >
       {children}
     </CartContext.Provider>

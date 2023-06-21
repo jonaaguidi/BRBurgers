@@ -10,9 +10,10 @@ import { postres } from '../../Data/postres';
 import { bebidas } from '../../Data/bebidas';
 import { salsas } from '../../Data/salsas';
 import { entradas } from '../../Data/entradas';
+import Cta from "../CTA/CTA"
 
 const Menu_App = () => {
-    const { addProductsToCart } = useContext(CartContext);
+    const { addProductsToCart, cartItems } = useContext(CartContext);
 
     {/* Estados de Dropdowns*/ }
     const [DropdownBurgersOpen, setDropdownBurgersOpen] = useState(false);
@@ -49,6 +50,7 @@ const Menu_App = () => {
     const handleshowPostres = () => {
         setShowPostres(!showPostres);
     };
+    
 
     return (
 
@@ -77,11 +79,12 @@ const Menu_App = () => {
                                         description={burger.description}
                                         price={burger.price}
                                         extras={burger.extras.map((extra, i) => (
-                                            <button className='btn_extras' onClick={() => addProductsToCart(burger, extra)} key={i}>{extra.name} - ${extra.price}</button>
+                                            <button className='btn_extras' onClick={() => { addProductsToCart(burger, extra); }} key={i}>{extra.name} - ${extra.price}</button>
                                         ))}
                                     />
-                                ))} 
+                                ))}
                             </div>
+
 
 
                             <div id="menu-dropdowns_subItem_2" className="menu-dropdowns_subItem" onClick={handleShowBurgerDobles}>
@@ -137,7 +140,7 @@ const Menu_App = () => {
                                 description={entrada.description}
                                 price={entrada.price}
                                 extras={entrada.options.map((option, i) => (
-                                    <button className='btn_extras' onClick={() => addProductsToCart(entrada, option)}  key={i}>{option.name} - ${option.price}</button>
+                                    <button className='btn_extras' onClick={() => addProductsToCart(entrada, option)} key={i}>{option.name} - ${option.price}</button>
                                 ))}
                             />
                         ))}
@@ -156,7 +159,7 @@ const Menu_App = () => {
                                 description={salsa.description}
                                 price={salsa.price}
                                 extras={salsa.options.map((option, i) => (
-                                    <button className='btn_extras' onClick={() => addProductsToCart(salsa, option)}  key={i}>{option.name}</button>
+                                    <button className='btn_extras' onClick={() => addProductsToCart(salsa, option)} key={i}>{option.name}</button>
                                 ))}
                             />
                         ))}
@@ -196,13 +199,14 @@ const Menu_App = () => {
                                 description={postre.description}
                                 price={postre.price}
                                 extras={postre.options.map((option, i) => (
-                                    <button className='btn_extras' onClick={() => addProductsToCart(postre, option)}  key={i}>{option.name} - ${postre.price}</button>
+                                    <button className='btn_extras' onClick={() => addProductsToCart(postre, option)} key={i}>{option.name} - ${postre.price}</button>
                                 ))}
                             />
                         ))}
                     </div>
                 </div>
             </div>
+            {cartItems.length === 0 ? null : <Cta />}
         </div>
     );
 };
