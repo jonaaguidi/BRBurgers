@@ -1,9 +1,17 @@
+import { useEffect } from "react"
 import review1 from "../../assets/imgs/testimonial-1.png"
 import review2 from "../../assets/imgs/testimonial-2.png"
 import review3 from "../../assets/imgs/testimonial-3.png"
 import "./Reviews.css"
 
 const Reviews = () => {
+
+    useEffect(() => {
+        // Inicializar el carrusel cuando el componente se monta
+        const carousel = document.querySelector("#testimonials .carousel");
+        new bootstrap.Carousel(carousel);
+      }, []);
+      
     return (
         <div id="testimonials" className="testimonials-container">
             <h4 className="testimonials-title">NUESTRAS RESEÑAS DE GOOGLE 📖🖊️</h4>

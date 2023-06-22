@@ -8,7 +8,7 @@ import { CartContext } from "../../context/CartContext";
 
 const Header_Cart = () => {
 
-    const { cartItems, totalPrices, totalAmount, clearCart } = useContext(CartContext);
+    const { cartItems, totalAmount, clearCart } = useContext(CartContext);
 
     const [modalIsOpen, setModalIsOpen] = useState(false);
     const openModal = () => {
@@ -82,7 +82,6 @@ const Header_Cart = () => {
                             ))}
                         </div>
                         <div className="btn-modal_container">
-                            <button className="btn-total"> Envía tu pedido por WhatsApp - <span>${totalPrices}</span></button>
                             <button onClick={clearCart} className="btn-clearCart"> <BsFillTrashFill /> Vaciar el Carrito </button>
                         </div>
                     </>

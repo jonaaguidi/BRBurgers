@@ -206,7 +206,7 @@ const Menu_App = () => {
                     </div>
                 </div>
             </div>
-            {cartItems.length === 0 ? null : <Cta />}
+            {cartItems.length === 0 ? null : <Cta /> }
         </div>
     );
 };
