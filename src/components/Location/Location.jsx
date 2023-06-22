@@ -4,7 +4,7 @@ import "./Location.css"
 const Location = () => {
     return (
         <div id="local" className="local-section">
-            <h4 className="local-title">📍 CONOCE NUESTRO LOCAL 📍</h4>
+            <h4 className="local-title">📍 CONOCE NUESTRO LOCAL </h4>
             <h6 className="local-subtitle">Proba no solo nuestras <strong>BURGERS🍔</strong><br></br> Sino tambien nuestras
                 <strong> CERVEZAS🍻 y TRAGOS🍸</strong>
             </h6>

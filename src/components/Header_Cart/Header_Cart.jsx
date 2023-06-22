@@ -26,7 +26,7 @@ const Header_Cart = () => {
             margin: "0 auto",
             padding: "24px",
             borderRadius: "15px",
-            maxHeight: "85vh",
+            maxHeight: "70vh",
             color: "white"
         },
     };

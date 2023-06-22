@@ -24,7 +24,7 @@ const Cta = () => {
             margin: "0 auto",
             padding: "32px",
             borderRadius: "15px",
-            maxHeight: "85vh"
+            maxHeight: "70vh"
         },
     };
 
