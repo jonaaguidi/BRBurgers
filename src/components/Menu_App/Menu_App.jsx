@@ -179,7 +179,7 @@ const Menu_App = () => {
                                 price={bebida.price}
                                 extras={bebida.options.map((option, i) => (
                                     <button className="btn_extras" onClick={() => addProductsToCart(bebida, option)} key={i}>
-                                        {option.name} - ${bebida.price}
+                                        {option.name}
                                     </button>
                                 ))}
                             />
@@ -199,7 +199,7 @@ const Menu_App = () => {
                                 description={postre.description}
                                 price={postre.price}
                                 extras={postre.options.map((option, i) => (
-                                    <button className='btn_extras' onClick={() => addProductsToCart(postre, option)} key={i}>{option.name} - ${postre.price}</button>
+                                    <button className='btn_extras' onClick={() => addProductsToCart(postre, option)} key={i}>{option.name}</button>
                                 ))}
                             />
                         ))}
