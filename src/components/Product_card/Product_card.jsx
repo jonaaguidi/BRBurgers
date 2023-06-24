@@ -51,7 +51,7 @@ const Product_card = ({ name, description, price, extras }) => {
           <BsFillBackspaceFill className='close_modal' onClick={closeModal} />
         </div>
         <div>
-          <div onClick={() => { setTimeout(closeModal, 550) }} className='btn-container_extras'>
+          <div onClick={() => { setTimeout(closeModal, 400) }} className='btn-container_extras'>
             {extras}
           </div>
         </div>

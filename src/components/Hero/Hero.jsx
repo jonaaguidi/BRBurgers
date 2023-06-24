@@ -8,7 +8,7 @@ const Hero = () => {
         <h1 className="hero-title">📍 Tu Hamburguesería de barrio <br /> 🍔🤝🍻</h1>
         <div className="hero-buttons">
           <button className="btn-menu">
-            <Link to="/App">
+            <Link to="/app">
               HACE TU PEDIDO!
             </Link>
           </button>

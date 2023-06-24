@@ -79,7 +79,7 @@ const Menu_App = () => {
                                         description={burger.description}
                                         price={burger.price}
                                         extras={burger.extras.map((extra, i) => (
-                                            <button className='btn_extras' onClick={() => { addProductsToCart(burger, extra); }} key={i}>{extra.name} - ${extra.price}</button>
+                                            <button className='btn_extras' onClick={() => { addProductsToCart(burger, extra); }} key={i}>{extra.name} - <span>${extra.price}</span></button>
                                         ))}
                                     />
                                 ))}
@@ -99,7 +99,7 @@ const Menu_App = () => {
                                         description={burger.description}
                                         price={burger.price}
                                         extras={burger.extras.map((extra, i) => (
-                                            <button className='btn_extras' onClick={() => addProductsToCart(burger, extra)} key={i}>{extra.name} - ${extra.price}</button>
+                                            <button className='btn_extras' onClick={() => addProductsToCart(burger, extra)} key={i}>{extra.name} - <span>${extra.price}</span></button>
                                         ))}
                                     />
                                 ))}
@@ -118,7 +118,7 @@ const Menu_App = () => {
                                         description={burger.description}
                                         price={burger.price}
                                         extras={burger.extras.map((extra, i) => (
-                                            <button className='btn_extras' onClick={() => addProductsToCart(burger, extra)} key={i}>{extra.name} - ${extra.price}</button>
+                                            <button className='btn_extras' onClick={() => addProductsToCart(burger, extra)} key={i}>{extra.name} - <span>${extra.price}</span></button>
                                         ))}
                                     />
                                 ))}
@@ -140,7 +140,7 @@ const Menu_App = () => {
                                 description={entrada.description}
                                 price={entrada.price}
                                 extras={entrada.options.map((option, i) => (
-                                    <button className='btn_extras' onClick={() => addProductsToCart(entrada, option)} key={i}>{option.name} - ${option.price}</button>
+                                    <button className='btn_extras' onClick={() => addProductsToCart(entrada, option)} key={i}>{option.name} - <span>${option.price}</span></button>
                                 ))}
                             />
                         ))}
