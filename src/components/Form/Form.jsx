@@ -24,8 +24,19 @@ const Form = () => {
       <h5 className="form_title">¡Completá los datos para que preparemos tu pedido!</h5>
 
       <form className="form_container" onSubmit={handleSubmit(onSubmit)}>
+      <div className="form-group">
+          <label htmlFor="aclaraciones">Aclaraciones 🍔📄</label>
+          <input
+            type="text"
+            className="form-control"
+            id="nombre"
+            placeholder="Ej. sin lechuga la Bropper"
+            {...register("aclaraciones", { required: false })}
+          />
+        </div>
+
         <div className="form-group">
-          <label htmlFor="nombre">Nombre*</label>
+          <label htmlFor="nombre">Nombre 🤝</label>
           <input
             type="text"
             className="form-control"
@@ -40,7 +51,7 @@ const Form = () => {
         </div>
 
         <div className="form-group">
-          <label htmlFor="direccion">Dirección/Entre que calles?*</label>
+          <label htmlFor="direccion">Dirección/Entre que calles? 📍</label>
           <input
             type="text"
             className="form-control"
@@ -55,7 +66,7 @@ const Form = () => {
         </div>
 
         <div className="form-group">
-          <label htmlFor="localidad">Localidad*</label>
+          <label htmlFor="localidad">Localidad 📍</label>
           <input
             type="text"
             className="form-control"
@@ -70,7 +81,7 @@ const Form = () => {
         </div>
 
         <div className="form-group">
-          <label htmlFor="pisoDepto">Piso/Depto</label>
+          <label htmlFor="pisoDepto">Piso/Depto 🏢</label>
           <input
             type="text"
             className="form-control"
@@ -81,7 +92,7 @@ const Form = () => {
 
         <div className="form-group">
           <label htmlFor="pago">
-            Pago en Efectivo o MercadoPago(7% de Recargo) ?
+            Pago en Efectivo💰 o MercadoPago (7% de Recargo)?
           </label>
           <select
             id="pago"
@@ -100,7 +111,7 @@ const Form = () => {
         </div>
 
         <div className="form-group">
-          <label htmlFor="turnos">Seleccioná el Turno</label>
+          <label htmlFor="turnos">Seleccioná el Turno ⬅️</label>
           <select
             id="turnos"
             className="form-select"
@@ -120,7 +131,7 @@ const Form = () => {
         </div>
 
         <div className="form-group">
-          <label htmlFor="envio">Selecciona la Zona</label>
+          <label htmlFor="envio">Selecciona la Zona ⬅️</label>
           <select
             id="envio"
             className="form-select"

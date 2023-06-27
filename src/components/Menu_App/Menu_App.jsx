@@ -50,7 +50,16 @@ const Menu_App = () => {
     const handleshowPostres = () => {
         setShowPostres(!showPostres);
     };
-    
+
+        const products = cartItems.map((product) =>
+            product);
+        const amounts = products.map((product) => product.amount);
+        console.log(amounts);
+        console.log(products);
+ 
+
+
+
 
     return (
 
@@ -75,12 +84,13 @@ const Menu_App = () => {
                                 {burgersSimples.map((burger, index) => (
                                     <Product_card
                                         key={index}
-                                        name={burger.name}
+                                        name={`${amounts}x ${burger.name}`}
                                         description={burger.description}
                                         price={burger.price}
                                         extras={burger.extras.map((extra, i) => (
                                             <button className='btn_extras' onClick={() => { addProductsToCart(burger, extra); }} key={i}>{extra.name} - <span>${extra.price}</span></button>
                                         ))}
+
                                     />
                                 ))}
                             </div>
@@ -206,7 +216,7 @@ const Menu_App = () => {
                     </div>
                 </div>
             </div>
-            {cartItems.length === 0 ? null : <Cta /> }
+            {cartItems.length === 0 ? null : <Cta />}
         </div>
     );
 };

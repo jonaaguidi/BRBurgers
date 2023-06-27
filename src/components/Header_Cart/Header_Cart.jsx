@@ -5,6 +5,7 @@ import "./Header_Cart.css";
 import { BsFillBackspaceFill, BsFillCartFill, BsFillCheckCircleFill, BsFillTrashFill } from "react-icons/bs";
 import { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
+import Cta from "../CTA/CTA";
 
 const Header_Cart = () => {
 
@@ -82,6 +83,7 @@ const Header_Cart = () => {
                             ))}
                         </div>
                         <div className="btn-modal_container">
+                            <Cta />
                             <button onClick={clearCart} className="btn-clearCart"> <BsFillTrashFill /> Vaciar el Carrito </button>
                         </div>
                     </>

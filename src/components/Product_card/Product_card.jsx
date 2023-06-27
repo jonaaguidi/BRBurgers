@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { BsFillCheckCircleFill } from 'react-icons/bs';
+import { BsFillCartFill, BsFillCheckCircleFill } from 'react-icons/bs';
 import { BsFillBackspaceFill } from "react-icons/bs";
 import Modal from 'react-modal';
 import './Product_card.css';
@@ -33,11 +33,13 @@ const Product_card = ({ name, description, price, extras }) => {
           <BsFillCheckCircleFill
             style={{ color: 'white', marginRight: '8px', marginBottom: '2px' }}
           />
-          {name}
+         {name}
         </h6>
         <p>{description}</p>
         <p>Desde <strong>${price}</strong></p>
-        <button onClick={openModal}>Añadir al carrito</button>
+        <button onClick={openModal}>
+          <BsFillCartFill style={{ transform: "scale(1.2),", marginRight:"4px", marginBottom: "4px" }} />Añadir al carrito
+        </button>
       </div>
 
       <Modal

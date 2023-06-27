@@ -1,11 +1,11 @@
 .btn-cta {
-    width: 100%;
     position: fixed;
-    z-index: 10;
-    bottom: 0px;
-    background-color: var(--secondary-color);
-    padding: 16px 8px;
-    display: flex;
-    justify-content: center;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    padding: 20px;
+    text-align: center;
+    z-index: 99;
 }
 
