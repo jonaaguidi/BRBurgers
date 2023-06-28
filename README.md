@@ -1,8 +1,8 @@
 # BRBurgers 🍔
 
-**Landing page + Web APP 📲 with shopping cart and form, to send the order message through the WhatsApp API ✔️**
+**Landing page + Web APP 📲 with shopping cart and form, to send the order message through the WhatsApp API✔️**
 
-➡️ Project Technologies ...
+**➡️ Project Technologies ...**
 
 - React.js (JSX)
     - React-fast-marquee
