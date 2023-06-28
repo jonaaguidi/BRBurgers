@@ -14,30 +14,35 @@ const Form = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-
-  // Obtener el precio del envío seleccionado
-  const envioPrice = Number(data.envio.match(/\$\s?(\d+)/)[1]);
-
-  // Sumar el precio del envío a totalPrices
-  const totalPedido = parseFloat(totalPrices) + envioPrice;
-
-    const message = `*Nombre:*\n${data.nombre}\n\n*Dirección/Entre que calles:*\n${data.direccion}\n\n*Localidad:*\n${data.localidad}\n\n*Piso/Depto:*\n${data.pisoDepto}\n\n*Pago en efectivo o con Mercado Pago (7% de recargo)?*\n${data.pago}\n\n*Seleccioná el turno:*\n${data.turnos}\n\n*Lo enviamos a:*\n_${data.envio}_\n\n*ACLARACIONES de tu Pedido:*\n_${data.aclaraciones}_\n\n*PEDIDO:*\n${cartItems.map((item) => (
-      `*${item.amount}* x *${item.name}*\n${item.options.map((option) => (
-        `${option.amount}x - ${option.name} = $${option.amount * option.price}`
-      )).join('\n')}`
-    )).join('\n\n')}\n\n*Total pedido: $${totalPedido}*\n\nBR BURGERS DELIVERY`;
-
-
+    // Obtener el precio del envío seleccionado
+    const envioPrice = Number(data.envio.match(/\$\s?(\d+)/)[1]);
+  
+    // Sumar el precio del envío a totalPrices
+    const totalPedido = parseFloat(totalPrices) + envioPrice;
+  
+    const message = `*Nombre:*\n${data.nombre}\n\n*Dirección/Entre que calles:*\n${data.direccion}\n\n*Localidad:*\n${data.localidad}\n\n*Piso/Depto:*\n${data.pisoDepto}\n\n*Pago en efectivo o con Mercado Pago (7% de recargo)?*\n${data.pago}\n\n*Seleccioná el turno:*\n${data.turnos}\n\n*Lo enviamos a:*\n_${data.envio}_\n\n*ACLARACIONES de tu Pedido:*\n_${data.aclaraciones}_\n\n*PEDIDO:*\n${cartItems
+      .map(
+        (item) =>
+          `*${item.amount}* x *${item.name}*\n${item.options
+            .map(
+              (option) =>
+                `${option.amount}x - ${option.name} = $${option.amount * option.price}`
+            )
+            .join('\n')}`
+      )
+      .join('\n\n')}\n\n*Total pedido: $${totalPedido}*\n\nBR BURGERS DELIVERY`;
+  
     // Codificar el mensaje para que se muestren las negritas y los saltos de línea en la URL
     const encodedMessage = encodeURIComponent(message);
-
+  
     // La URL de WhatsApp con el mensaje
-    const url = `https://wa.me/send?phone=5491122529712&text=${encodedMessage}`;
-
+    const phoneNumber = "5491122529712"; // Reemplaza con tu número de teléfono
+    const url = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+  
     // Redirigir al usuario a la URL de WhatsApp
     window.location.href = url;
-
   };
+  
 
   return (
     <>
