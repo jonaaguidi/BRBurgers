@@ -51,16 +51,6 @@ const Menu_App = () => {
         setShowPostres(!showPostres);
     };
 
-        const products = cartItems.map((product) =>
-            product);
-        const amounts = products.map((product) => product.amount);
-        console.log(amounts);
-        console.log(products);
- 
-
-
-
-
     return (
 
         <div className="menu-app" id="menu-app">
@@ -84,7 +74,7 @@ const Menu_App = () => {
                                 {burgersSimples.map((burger, index) => (
                                     <Product_card
                                         key={index}
-                                        name={`${amounts}x ${burger.name}`}
+                                        name={burger.name}
                                         description={burger.description}
                                         price={burger.price}
                                         extras={burger.extras.map((extra, i) => (

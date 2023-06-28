@@ -33,6 +33,27 @@ export const burgersDobles = [
     ]
   },
   {
+    id: 199,
+    name: "Triple Queso con papas",
+    description: "Triple carne Smash de 80gr cada una, cheddar x4",
+    price: 3000,
+    amount: 0,
+    extras: [
+      {
+        name: "Sin Extra",
+        price: 3000
+      },
+      {
+        name: "Extra Bacon",
+        price: 3200
+      },
+      {
+        name: "Extra carne con cheddar",
+        price: 3400
+      }
+    ]
+  },
+  {
     id: 109,
     name: "Smash Onion Doble con papas",
     description: "220gr de carne smash, cebolla salteada, cheddar y pepinos.",

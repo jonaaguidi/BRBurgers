@@ -1,7 +1,12 @@
 import { useForm } from "react-hook-form";
 import "./Form.css"
+import { useContext } from "react";
+import { CartContext } from "../../context/CartContext";
 
 const Form = () => {
+
+  const { cartItems, totalPrices } = useContext(CartContext);
+
   const {
     register,
     handleSubmit,
@@ -9,14 +14,29 @@ const Form = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-    // Acceder a los valores del formulario
-    console.log(data.nombre);
-    console.log(data.direccion);
-    console.log(data.localidad);
-    console.log(data.pisoDepto);
-    console.log(data.pago);
-    console.log(data.turnos);
-    console.log(data.envio);
+
+  // Obtener el precio del envío seleccionado
+  const envioPrice = Number(data.envio.match(/\$\s?(\d+)/)[1]);
+
+  // Sumar el precio del envío a totalPrices
+  const totalPedido = parseFloat(totalPrices) + envioPrice;
+
+    const message = `*Nombre:*\n${data.nombre}\n\n*Dirección/Entre que calles:*\n${data.direccion}\n\n*Localidad:*\n${data.localidad}\n\n*Piso/Depto:*\n${data.pisoDepto}\n\n*Pago en efectivo o con Mercado Pago (7% de recargo)?*\n${data.pago}\n\n*Seleccioná el turno:*\n${data.turnos}\n\n*Lo enviamos a:*\n_${data.envio}_\n\n*ACLARACIONES de tu Pedido:*\n_${data.aclaraciones}_\n\n*PEDIDO:*\n${cartItems.map((item) => (
+      `*${item.amount}* x *${item.name}*\n${item.options.map((option) => (
+        `${option.amount}x - ${option.name} = $${option.amount * option.price}`
+      )).join('\n')}`
+    )).join('\n\n')}\n\n*Total pedido: $${totalPedido}*\n\nBR BURGERS DELIVERY`;
+
+
+    // Codificar el mensaje para que se muestren las negritas y los saltos de línea en la URL
+    const encodedMessage = encodeURIComponent(message);
+
+    // La URL de WhatsApp con el mensaje
+    const url = `https://wa.me/send?phone=5491122529712&text=${encodedMessage}`;
+
+    // Redirigir al usuario a la URL de WhatsApp
+    window.location.href = url;
+
   };
 
   return (
@@ -24,7 +44,7 @@ const Form = () => {
       <h5 className="form_title">¡Completá los datos para que preparemos tu pedido!</h5>
 
       <form className="form_container" onSubmit={handleSubmit(onSubmit)}>
-      <div className="form-group">
+        <div className="form-group">
           <label htmlFor="aclaraciones">Aclaraciones 🍔📄</label>
           <input
             type="text"
@@ -162,16 +182,16 @@ const Form = () => {
         <h6 className="form_title_2">
           Gracias por elegir BR Burgers 🍔
         </h6>
-        <p>          
+        <p>
           Martes a Domingos
           <br></br>
           De 19 a 23 hs!
         </p>
 
-          <div className="btn_container">
-            <button type="submit" className="btn-CTA">Enviar pedido</button>
-          </div>
-        
+        <div className="btn_container">
+          <button type="submit" className="btn-CTA">Enviar pedido</button>
+        </div>
+
       </form>
     </>
   );
