@@ -42,3 +42,16 @@ p{
     transform: scale(1.04);
     background-color: darkred;
 }
+
+.ReactModal__Content::-webkit-scrollbar {
+    width: 8px;
+    height: 10px;
+  }
+ .ReactModal__Content::-webkit-scrollbar-track{
+    border-radius: 16px;
+    background: white;
+  }
+.ReactModal__Content::-webkit-scrollbar-thumb {
+    border-radius: 16px;
+    background: black;
+  }

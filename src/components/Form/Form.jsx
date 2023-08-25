@@ -36,7 +36,7 @@ const Form = () => {
     const encodedMessage = encodeURIComponent(message);
   
     // La URL de WhatsApp con el mensaje
-    const phoneNumber = "5491122529712"; // Reemplaza con tu número de teléfono
+    const phoneNumber = "5491122529712"; 
     const url = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
   
     // Redirigir al usuario a la URL de WhatsApp

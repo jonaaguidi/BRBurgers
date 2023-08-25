@@ -7,5 +7,8 @@ export default defineConfig({
   resolve: {
     extensions: ['.js', '.jsx', '.json', '.vue', '.svg'],
   },
+  define: {
+    'process.env': {}
+  }
 })
 
